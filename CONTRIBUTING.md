@@ -16,6 +16,5 @@ You can do some things to increase the chance that your pull request is accepted
 * Submit one pull request per fix or feature.
 * If your changes are not up to date - rebase your branch on the parent branch.
 * Follow the conventions used in the project.
-* Remember about tests and documentation.
 * Don't bump version.
 

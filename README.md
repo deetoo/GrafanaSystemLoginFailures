@@ -17,7 +17,7 @@ There are just a few steps needed to make this all work.
 5. Creatng a new Graph in Grafana, which will display the number of failed login attempts.
 
 Ultimately, that graph will look something like this.
-!(loginfaiures.png)
+!(loginfailures.png)
 
 ## Built With
 

@@ -3,7 +3,9 @@
 This is how I graph, and monitor the number of login failures on a Linux server using Grafana with a MySQL data source.
 
 Ultimately, that graph will look something like this.
-![](loginfailures.png)
+![](images/loginfailures1.png)
+or this:
+![](images/loginfailures2.png)
 
 ## Getting Started
 
@@ -31,7 +33,7 @@ There are just a few steps needed to make this all work.
 1. Create a new DataSource using that MySQL DB.
 2. Login to Grafana, select Data Sources, click "`+ Add data source`"
 3. Complete the details for adding a data source, see the image below for an example.
-![](datasource.png)
+![](images/datasource.png)
 4. After the data source has been created, add a graph, call it whatever you'd like.
 5. Edit the graph, select the Data source you just created in step 4.
 6. After selecting the Data source, your query should look something like:
@@ -42,7 +44,7 @@ There are just a few steps needed to make this all work.
       FROM Fails
       WHERE $__timeFilter(FailDate)
       ORDER BY FailDate ASC`
-7. Click on the `Display` tab, and check 'Lines` (or bars, if you'd prefer vertical bars)
+7. Click on the `Display` tab, and check 'Lines` (or bars, if you'd prefer vertical bars, see examples above.)
 
 **Shell Script:**
 1. Copy the `loginfailures.sh` shell script from this repo to some directory on your server.

@@ -2,6 +2,9 @@
 
 This is how I graph, and monitor the number of login failures on a Linux server using Grafana with a MySQL data source.
 
+Ultimately, that graph will look something like this.
+![](loginfailures.png)
+
 ## Getting Started
 
 You'll need to have a basic understanding of Linux System Administration, a MySQL Database, and Grafana to make any sense of what I'm doing here.
@@ -16,8 +19,18 @@ There are just a few steps needed to make this all work.
 4. Defining a datasource in Grafana that uses this MySQL DB
 5. Creatng a new Graph in Grafana, which will display the number of failed login attempts.
 
-Ultimately, that graph will look something like this.
-![](loginfailures.png)
+
+### Detailed Steps
+MYSQL:
+1. Create the database: mysql> CREATE DATABASE LoginFailures;
+2. Switch to the database: mysql>  USE LoginFailures;
+3. Create the database table: mysql> CREATE TABLE Fails ( id int auto_increment, FailDate datetime, FailCount int, primary key(id) );
+
+Grafana:
+1. Create a new DataSource using that MySQL DB.
+2. Login to Grafana, select Data Sources, click "+ Add data source"
+3. Complete the details for adding a data source, see the image below for an example.
+![](datasource.png)
 
 ## Built With
 

@@ -61,10 +61,6 @@ There are just a few steps needed to make this all work.
 
 Please read [CONTRIBUTING.md](https://github.com/deetoo/GrafanaSystemLoginFailures/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/deetoo/GrafanaSystemLoginFailures/tags). 
-
 ## Authors
 
 * **Doug Dobies** - *Initial work* - [deetoo](https://github.com/deetoo)

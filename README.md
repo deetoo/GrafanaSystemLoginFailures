@@ -21,13 +21,13 @@ There are just a few steps needed to make this all work.
 
 
 ### Detailed Steps
-MYSQL:
+**MYSQL:**
 1. Create the database: `mysql> CREATE DATABASE LoginFailures;`
 2. Switch to the database: `mysql>  USE LoginFailures;`
 3. Create the database table: `mysql> CREATE TABLE Fails ( id int auto_increment, FailDate datetime, FailCount int, primary key(id) );`
 4. Create the DB user that will both populate and read data from the DB: `mysql> GRANT ALL PRIVILEGES ON LoginFailures.* TO 'FailUser'@'localhost' IDENTIFIED BY 'create_a_complex_password_here'`
 
-Grafana:
+**Grafana:**
 1. Create a new DataSource using that MySQL DB.
 2. Login to Grafana, select Data Sources, click "`+ Add data source`"
 3. Complete the details for adding a data source, see the image below for an example.
@@ -44,7 +44,7 @@ Grafana:
       ORDER BY FailDate ASC`
 7. Click on the `Display` tab, and check 'Lines` (or bars, if you'd prefer vertical bars)
 
-Shell Script:
+**Shell Script:**
 1. Copy the `loginfailures.sh` shell script from this repo to some directory on your server.
 2. Update the contents of the shell script to connect to the correct db, table, and username/pass.
 3. Change the permissions on the script to allow execution (ex: chmod 755 loginfailures.sh)
